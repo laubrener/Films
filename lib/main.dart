@@ -32,9 +32,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Films App',
       initialRoute: 'home',
-      routes: {'home': (_) => HomeScreen(), 'details': (_) => DetailsScreen()},
+      routes: {
+        'home': (_) => const HomeScreen(),
+        'details': (_) => const DetailsScreen()
+      },
       theme: ThemeData.light()
-          .copyWith(appBarTheme: AppBarTheme(color: Colors.indigo)),
+          .copyWith(appBarTheme: const AppBarTheme(color: Colors.indigo)),
     );
   }
 }
